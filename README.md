@@ -1,32 +1,32 @@
-# BudgetTrackerTS
+# BudgetTrackerTS (With Server & Jest)
 
-BudgetTrackerTS is a Budget Tracker application built for **CSE 310 – Applied Programming (Module #2: TypeScript)**.  
-It demonstrates TypeScript types, DOM manipulation, localStorage persistence, filtering, and basic UI/UX design.
+Author: Josue Neiculeo
 
-## Features
-- Add income and expense transactions with category, notes, and date.
-- Edit or delete transactions (prompt-based editing in this simple demo).
-- Filter transactions by category and date range.
-- Live summary showing total income, total expenses, and balance.
-- Data stored in browser localStorage (no server required).
+This package includes a TypeScript budget tracker (browser app), a small library used for unit tests, a development server script, and Jest unit tests configured for ESM+TypeScript.
 
-## How to run
-1. Open `index.html` in a browser (Chrome, Edge, Firefox).
-2. No build step required — `app.js` is included and ready to run. `app.ts` is provided as the TypeScript source file.
-3. Add transactions and try filters. Data persists automatically.
+## Quick start
 
-## Files
-- `index.html` — main page
-- `styles.css` — styles
-- `app.ts` — TypeScript source (for learning & inspection)
-- `app.js` — compiled JavaScript (browser runtime)
-- `README.md` — this file
-- `Module_Submit.md` — submission checklist and time log
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Notes
-- This project includes both a `.ts` source file and a precompiled `app.js` so it runs in the browser without any build tools.
-- All functions include comments in `app.ts`. The JS file is readable and works directly.
+2. Build TypeScript to `dist/`:
+   ```bash
+   npm run build
+   ```
 
-## Author
-**Josue Neiculeo** — CSE 310 Student
+3. Run the static server and open http://localhost:8080:
+   ```bash
+   npm run server
+   ```
 
+4. Run tests:
+   ```bash
+   npm test
+   ```
+
+Notes:
+- `server` uses `npx http-server` so you don't need a global install.
+- The app uses ES modules in the browser. `index.html` loads `dist/*.js` with `type="module"`.
+- Jest is configured to run TypeScript tests using `ts-jest` in ESM mode. If tests fail due to Node or environment versions, ensure Node >= 18 and npm installed.
