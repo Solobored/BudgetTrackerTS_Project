@@ -1,17 +1,129 @@
-:root{--bg:#f5f7fb;--card:#ffffff;--ink:#0f1724;--muted:#6b7280;--accent:#2563eb}
-*{box-sizing:border-box;font-family:Inter, system-ui, -apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
-body{margin:0;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
-header{background:linear-gradient(90deg,#eef2ff,#ffffff);padding:20px;text-align:center}
-h1{margin:0}
-main{width:min(1100px,96%);margin:20px auto;display:grid;grid-template-columns:1fr 320px;gap:16px}
-.panel{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 4px 12px rgba(15,23,42,.05)}
-.row{display:flex;flex-direction:column;margin-bottom:10px}
-.row label{font-size:13px;color:var(--muted);margin-bottom:6px}
-input,select,button{padding:8px;border-radius:6px;border:1px solid #e6edf5;background:#fff}
-button{background:var(--accent);color:#fff;border:0;cursor:pointer}
-#txList{list-style:none;padding:0;margin:0;display:grid;gap:8px}
-.tx{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:6px;border:1px solid #e6edf5;background:#fff}
-.badge{padding:4px 8px;border-radius:999px;font-size:12px;background:#eef2ff;color:var(--accent)}
-.summary div{margin-top:8px;font-weight:600}
-footer{text-align:center;color:var(--muted);padding:12px 0}
-@media (max-width:800px){main{grid-template-columns:1fr}.controls-panel{order:3}}
+/* ========== CSS VARIABLES ========== */
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --ink: #0f1724;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+
+/* ========== BASE STYLES ========== */
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== HEADER STYLES ========== */
+header {
+  background: linear-gradient(90deg, #eef2ff, #ffffff);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* ========== MAIN LAYOUT ========== */
+main {
+  width: min(1100px, 96%);
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+}
+
+/* ========== PANEL COMPONENTS ========== */
+.panel {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+/* ========== FORM CONTROLS ========== */
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.row label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input, select, button {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e6edf5;
+  background: #fff;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+/* ========== TRANSACTION LIST ========== */
+#txList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.tx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e6edf5;
+  background: #fff;
+}
+
+/* ========== UTILITY CLASSES ========== */
+.badge {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #eef2ff;
+  color: var(--accent);
+}
+
+.summary div {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 12px 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  .controls-panel {
+    order: 3;
+  }
+}
