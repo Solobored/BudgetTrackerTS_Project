@@ -1,3 +1,6 @@
+// lib.test.ts - Jest test cases for TypeScript functions and classes
+// Author: Josue Neiculeo
+
 import { sumRecursive, factorial, ExampleClass, fakeApi, throwIfNegative } from '../lib';
 
 test('sumRecursive works', () => {
